@@ -1,4 +1,4 @@
-FROM alpine:latest AS build
+FROM arm32v6/alpine:latest AS build
 MAINTAINER Jan Rohwer <jan@rohwer.online>
 
 # SEAFILE_VERSION:
@@ -90,7 +90,7 @@ RUN mkdir /seafile/logs && \
     mkdir /seafile/pids && \
     mkdir /seafile/data
 
-FROM alpine:latest
+FROM arm32v6/alpine:latest
 MAINTAINER Jan Rohwer <jan@rohwer.online>
 
 ENV SERVER_NAME="Seafile"
