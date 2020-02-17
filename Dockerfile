@@ -1,6 +1,6 @@
 FROM arm32v6/alpine:latest AS build
 MAINTAINER Elian Freyermuth <threadrr@gmail.com>
-COPY ../qemu-arm-static /usr/bin/
+COPY qemu-arm-static /usr/bin/
 
 # SEAFILE_VERSION:
 # Seafile-Server version do townload and install
@@ -93,7 +93,7 @@ RUN mkdir /seafile/logs && \
 
 FROM arm32v6/alpine:latest
 MAINTAINER Elian Freyermuth <threadrr@gmail.com>
-COPY ../qemu-arm-static /usr/bin/
+COPY qemu-arm-static /usr/bin/
 
 ENV SERVER_NAME="Seafile"
 ENV SERVER_DOMAIN="seafile.domain.com"

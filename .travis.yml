@@ -17,7 +17,7 @@ script:
   wget -O qemu-arm-static.tar.gz "${QEMU_USER_STATIC_DOWNLOAD_URL}/${QEMU_USER_STATIC_LATEST_TAG}/x86_64_qemu-${QEMU_USER_STATIC_ARCH}-static.tar.gz" &&
   tar xzf qemu-arm-static.tar.gz
 # build image
-- docker build -t threadrr/seafile-arm32v6-raspberry-pi:build docker/
+- docker build -t threadrr/seafile-arm32v6-raspberry-pi:build .
 # push image
 - export TAG=$TRAVIS_TAG
 - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
